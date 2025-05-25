@@ -20,7 +20,8 @@ body {
         "surprise surprise"
         "photo timer"
         "countdown countdown"
-        "buttons buttons";
+        "buttons buttons"
+        "spotify spotify";
     gap: 20px;
     align-items: center;
     justify-items: center;
@@ -124,6 +125,11 @@ p#message {
     justify-content: center;
 }
 
+.spotify-player {
+    grid-area: spotify;
+    margin-top: 10px;
+}
+
 button {
     padding: 12px 25px;
     font-size: 1.3em;
@@ -217,25 +223,12 @@ button:hover {
             "photo"
             "timer"
             "countdown"
-            "buttons";
+            "buttons"
+            "spotify";
     }
 
     #timer-canvas {
         justify-self: center;
         margin-right: 0;
     }
-}
-/* Add this to the end of styles.css */
-.music-fallback {
-    grid-area: buttons;
-    text-align: center;
-    color: #ffffff;
-    margin-top: 10px;
-}
-.music-fallback a {
-    color: #ffcc00;
-    text-decoration: underline;
-}
-.music-fallback a:hover {
-    color: #e6b800;
 }
