@@ -225,3 +225,17 @@ button:hover {
         margin-right: 0;
     }
 }
+/* Add this to the end of styles.css */
+.music-fallback {
+    grid-area: buttons;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.music-fallback a {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+.music-fallback a:hover {
+    color: #e6b800;
+}
