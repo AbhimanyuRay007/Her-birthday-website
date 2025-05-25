@@ -8,6 +8,7 @@ const quotes = [
     "Here's to a day as special as you are! 🎁💖",
     "Wishing you endless joy and sweet surprises! 🍰🎈",
     "Meri yehi dua rahegi ki apke saare sapne sakar ho 🌟🎉"
+
 ];
 const surpriseQuotes = [
     "To my favorite person, may your birthday be as beautiful and special as you are. 🎀💕",
