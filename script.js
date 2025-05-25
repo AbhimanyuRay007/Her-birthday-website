@@ -10,7 +10,7 @@ const quotes = [
     "Meri yehi dua rahegi ki apke saare sapne sakar ho 🌟🎉"
 ];
 const surpriseQuotes = [
-    "To my favorite person, may your birthday be as beautiful and special as you are. 🎀💕",
+   "To my favorite person, may your birthday be as beautiful and special as you are. 🎀💕",
     "Another year of you is a gift to everyone who knows you. 🌈😊",
     "Wishing you a day as sweet, kind, and wonderful as you are. Happy Birthday, love! 🌟🎂",
     "You're sweeter than the sweetest cake! 🍰💖"
@@ -138,4 +138,23 @@ photoUpload.addEventListener("change", (event) => {
         };
         reader.readAsDataURL(file);
     }
+});
+
+// Music control
+const audio = document.getElementById("birthday-song");
+const musicBtn = document.getElementById("music-btn");
+let isPlaying = false;
+
+musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+        audio.pause();
+        musicBtn.textContent = "Play Music 🎶";
+    } else {
+        audio.play().catch(error => {
+            console.error("Playback failed:", error);
+            alert("Unable to play the song. Please ensure your browser supports audio playback and the file is accessible.");
+        });
+        musicBtn.textContent = "Pause Music 🎶";
+    }
+    isPlaying = !isPlaying;
 });
