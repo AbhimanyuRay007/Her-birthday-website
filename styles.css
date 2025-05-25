@@ -20,8 +20,7 @@ body {
         "surprise surprise"
         "photo timer"
         "countdown countdown"
-        "buttons buttons"
-        "spotify spotify";
+        "buttons buttons";
     gap: 20px;
     align-items: center;
     justify-items: center;
@@ -125,11 +124,6 @@ p#message {
     justify-content: center;
 }
 
-.spotify-player {
-    grid-area: spotify;
-    margin-top: 10px;
-}
-
 button {
     padding: 12px 25px;
     font-size: 1.3em;
@@ -223,8 +217,7 @@ button:hover {
             "photo"
             "timer"
             "countdown"
-            "buttons"
-            "spotify";
+            "buttons";
     }
 
     #timer-canvas {
