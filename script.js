@@ -146,12 +146,12 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player', {
         height: '0',
         width: '0',
-        videoId: 'IltsOcCj1Ak', // YouTube ID for "Haseen" by Talwiinder
+        videoId: 'YBphrqtiRjA', // YouTube ID for "Haseen" by Talwiinder
         playerVars: {
             'autoplay': 0,
             'controls': 0,
             'loop': 1,
-            'playlist': 'IltsOcCj1Ak' // Required for looping
+            'playlist': 'YBphrqtiRjA' // Required for looping
         },
         events: {
             'onReady': onPlayerReady
