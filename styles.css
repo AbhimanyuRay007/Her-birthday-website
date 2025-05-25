@@ -65,7 +65,7 @@ p#message {
 #surprise-quote {
     grid-area: surprise;
     font-size: 1.4em;
-    color: #C83F49;
+    color: #ffcc00;
     font-style: italic;
     max-width: 500px;
     opacity: 0;
