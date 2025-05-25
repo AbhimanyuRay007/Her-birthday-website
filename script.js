@@ -1,0 +1,227 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #96c93d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="gold" d="M12 2L10 9l-7 1 5 5-2 8 6-3 6 3-2-8 5-5-7-1z"/></svg>'), auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "message message"
+        "quote quote"
+        "surprise surprise"
+        "photo timer"
+        "countdown countdown"
+        "buttons buttons";
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    max-width: 800px;
+    padding: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+h1 {
+    grid-area: header;
+    font-size: 3.5em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    color: #ff6b6b;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+p#message {
+    grid-area: message;
+    font-size: 1.8em;
+    color: #ffeaa7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.name-highlight {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+#quote {
+    grid-area: quote;
+    font-size: 1.4em;
+    color: #ffffff;
+    font-style: italic;
+    max-width: 500px;
+    transition: opacity 0.5s;
+}
+
+#surprise-quote {
+    grid-area: surprise;
+    font-size: 1.4em;
+    color: #C83F49;
+    font-style: italic;
+    max-width: 500px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#surprise-quote.show {
+    opacity: 1;
+}
+
+#surprise-quote.hidden {
+    opacity: 0;
+}
+
+.photo-frame {
+    grid-area: photo;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    transform: rotate(-5deg);
+}
+
+#birthday-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#photo-upload {
+    display: block;
+    margin: 10px auto;
+    font-size: 1em;
+    color: #ff6b6b;
+}
+
+#countdown {
+    grid-area: countdown;
+    font-size: 1.6em;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#timer-canvas {
+    grid-area: timer;
+    justify-self: end;
+    margin-right: 20px;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.3em;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.1);
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.balloons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle, rgba(255, 99, 132, 0.8), rgba(255, 99, 132, 0.5));
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.balloon:nth-child(2) {
+    left: 20%;
+    background: radial-gradient(circle, rgba(255, 206, 86, 0.8), rgba(255, 206, 86, 0.5));
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 40%;
+    background: radial-gradient(circle, rgba(54, 162, 235, 0.8), rgba(54, 162, 235, 0.5));
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+    left: 60%;
+    background: radial-gradient(circle, rgba(75, 192, 192, 0.8), rgba(75, 192, 192, 0.5));
+    animation-delay: 6s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "message"
+            "quote"
+            "surprise"
+            "photo"
+            "timer"
+            "countdown"
+            "buttons";
+    }
+
+    #timer-canvas {
+        justify-self: center;
+        margin-right: 0;
+    }
+}

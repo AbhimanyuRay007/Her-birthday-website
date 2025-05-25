@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting" class="bounce">Happy Birthday! 🎉</h1>
+        <p id="message">Wishing you a fantastic year ahead, [Name]! 🥳</p>
+        <div id="quote"></div>
+        <div id="surprise-quote" class="hidden">Hover or click for a surprise! ✨</div>
+        <div class="photo-frame">
+            <img id="birthday-photo" src="placeholder.jpg" alt="Birthday Person">
+            <input type="file" id="photo-upload" accept="image/*">
+        </div>
+        <div id="countdown"></div>
+        <canvas id="timer-canvas" width="200" height="200"></canvas>
+        <button id="celebrate-btn">Celebrate! 🎈</button>
+        <button id="music-btn">Play Music 🎶</button>
+        <button id="surprise-btn">Reveal Surprise Quote! 💖</button>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <div id="youtube-player" style="display: none;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
