@@ -1,5 +1,5 @@
 // Personalize the birthday message
-const name = "Friend"; // Replace with the birthday person's name
+const name = "~Arshil~"; // Replace with the birthday person's name
 document.getElementById("message").innerHTML = `Wishing you a fantastic year ahead, <span class="name-highlight">${name}</span>! 🥳`;
 
 // Random birthday quotes
@@ -20,7 +20,7 @@ const surpriseQuoteElement = document.getElementById("surprise-quote");
 quoteElement.textContent = quotes[Math.floor(Math.random() * quotes.length)];
 
 // Countdown to birthday
-const birthday = new Date("2025-06-01T00:00:00"); // Set the birthday date
+const birthday = new Date("2025-05-26T00:00:00"); // Set the birthday date
 const countdownElement = document.getElementById("countdown");
 const timerCanvas = document.getElementById("timer-canvas");
 const ctx = timerCanvas.getContext("2d");
