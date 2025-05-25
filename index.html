@@ -19,8 +19,12 @@
         <div id="countdown"></div>
         <canvas id="timer-canvas" width="200" height="200"></canvas>
         <button id="celebrate-btn">Celebrate! 🎈</button>
-        <button id="music-btn">Play Music 🎶</button>
         <button id="surprise-btn">Reveal Surprise Quote! 💖</button>
+        <div class="spotify-player">
+            <iframe src="https://open.spotify.com/embed/track/3xFhmz1TdWmh0vAwB4qP0Y" 
+                    width="300" height="80" frameborder="0" 
+                    allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </div>
     <canvas id="confetti-canvas"></canvas>
     <div class="balloons">
@@ -29,10 +33,7 @@
         <div class="balloon"></div>
         <div class="balloon"></div>
     </div>
-    <div id="youtube-player" style="display: none;"></div>
-    <p class="music-fallback">Can't hear the music? <a href="https://www.youtube.com/watch?v=IltsOcCj1Ak" target="_blank">Listen to Haseen on YouTube</a>!</p>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 </html>
