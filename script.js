@@ -146,20 +146,20 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player', {
         height: '0',
         width: '0',
-        videoId: 'YBphrqtiRjA', // YouTube ID for "Haseen" by Talwiinder
+        videoId: 'IltsOcCj1Ak', // YouTube ID for "Haseen" by Talwiinder
         playerVars: {
             'autoplay': 0,
-            'controls': 0,
-            'loop': 1,
-            'playlist': 'YBphrqtiRjA' // Required for looping
+            'controls': 0
         },
         events: {
-            'onReady': onPlayerReady
+            'onReady': onPlayerReady,
+            'onError': onPlayerError
         }
     });
 }
 
 function onPlayerReady(event) {
+    console.log("YouTube Player Ready: Attempting to load video ID IltsOcCj1Ak (Haseen by Talwiinder)");
     const musicBtn = document.getElementById("music-btn");
     let isPlaying = false;
 
@@ -167,10 +167,16 @@ function onPlayerReady(event) {
         if (isPlaying) {
             player.pauseVideo();
             musicBtn.textContent = "Play Music 🎶";
+            console.log("Music paused");
         } else {
             player.playVideo();
             musicBtn.textContent = "Pause Music 🎶";
+            console.log("Music playing: Haseen by Talwiinder");
         }
         isPlaying = !isPlaying;
     });
+}
+
+function onPlayerError(event) {
+    console.error("YouTube Player Error:", event.data);
 }
